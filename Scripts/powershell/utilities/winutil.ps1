@@ -1,0 +1,1 @@
+Invoke-WebRequest -useb https://christitus.com/win | Invoke-Expression
