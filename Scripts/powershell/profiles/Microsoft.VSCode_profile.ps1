@@ -262,8 +262,8 @@ function winutil {
             Write-Host "Launching WinUtil by @Chris Titus Tech" -ForegroundColor Green
         }
         else {
-            Write-Host "winutil not found - Please install it from"
-            Write-Host "@ZanyTHEbar Github" -ForegroundColor Blue
+            Write-Host "winutil not found - Please install it to" + $winutil + "from:" -ForegroundColor Green
+            Write-Host "@ZanyTHEbar Scripts Github Repo" -ForegroundColor Blue
             start "https://github.com/ZanzyTHEbar/Scripts/blob/master/Scripts/powershell/utilities/winutil.ps1"
         }   
     }
@@ -272,7 +272,7 @@ function winutil {
     }
 }
 
-function Robo_Copy($source, $destination) {
+function robo_copy($source, $destination) {
     try {
         $robocopy = GetUserPowerShellPath + "\Scripts\robo_copy.ps1"
         if ((Test-Path -Path $robocopy -PathType Leaf)) {
@@ -280,8 +280,8 @@ function Robo_Copy($source, $destination) {
             Write-Host "Launching Custom RoboCopy by @ZanzyTHEbar" -ForegroundColor Green
         }
         else {
-            Write-Host "Custom RoboCopy not found - Please install it from"
-            Write-Host "@ZanyTHEbar Github" -ForegroundColor Blue
+            Write-Host "Custom RoboCopy not found - Please install it to" + $robocopy + "from:" -ForegroundColor Green
+            Write-Host "@ZanyTHEbar Scripts Github Repo" -ForegroundColor Blue
             start "https://github.com/ZanzyTHEbar/Scripts/blob/master/Scripts/powershell/utilities/robo_copy.ps1"
         }   
     }
