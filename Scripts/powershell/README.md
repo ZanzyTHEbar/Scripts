@@ -12,10 +12,25 @@ This script setups necessary environment variables and aliases for the PowerShel
 
 > **Note**: You must manually install the fonts (or whatever font you prefer - the included one is best). You can find the fonts in the [`fonts`](/Scripts/powershell/profiles/fonts/) directory.
 
+You clone this repo and install the profile by running the following command:
+
+```powershell
+cd $HOME/Documents/GitHub/Scripts/Scripts/powershell/profiles
+./setup.ps1
+```
+
+Or you can use the following `one-liner`:
+
+```powershell
+irm https://github.com/ZanzyTHEbar/Scripts/raw/main/Scripts/powershell/profiles/setup.ps1 | iex
+```
+
 ### Manually Install fonts
 
 To manually install the fonts, you will need to open the directory where the fonts are located, selet all of them and right-click.
 Click the `install` option.
+
+Once installed, you can proceed to set the font in your terminal(s).
 
 #### Powershell
 
@@ -49,3 +64,29 @@ C:\Users\{username}\Documents\WindowsPowerShell
 ```
 
 Restart VSCode and you should be good to go.
+
+### Utilites `robo_copy.ps1`
+
+This script is used to copy files from one directory to another _very quickly_. It uses `robocopy` with the most-ideal common flags already set.
+
+The only two flags that you will need to set are the `source` and `destination` directories.
+
+Once copied to your `$HOME/Documents/WindowsPowerShell/Scripts` directory You can do this by running the following command:
+
+```powershell
+robo_copy <source> <destination>
+```
+
+### Utilites `winutil_copy.ps1`
+
+This script is used to run the [`WinUtil`](https://github.com/ChrisTitusTech/winutil/) by `Chris Titus`.
+
+This utility offers advanced features for your PC. It is a great tool to use to clean up your PC and make it run faster, as well as simply manage installs of common softwares and features.
+
+There are no flags to set for this script. It will automatically download the latest version of `WinUtil` and run it - it will not install ´WinUtil´ you will need internet to use this command. If you want to install `WinUtil` you can do so by navigating to the url above and downloading the latest version.
+
+Once copied to your `$HOME/Documents/WindowsPowerShell/Scripts` directory You can do this by running the following command:
+
+```powershell
+winutil
+```

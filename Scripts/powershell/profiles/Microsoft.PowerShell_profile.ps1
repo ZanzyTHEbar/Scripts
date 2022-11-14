@@ -27,6 +27,8 @@ $isAdmin = $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administ
 function cd... { Set-Location ..\.. }
 function cd.... { Set-Location ..\..\.. }
 
+function Xargs { param( $Cmd ) process { $args += , $_ } end { & $Cmd @args } }
+
 # Compute file hashes - useful for checking successful downloads 
 function md5 { Get-FileHash -Algorithm MD5 $args }
 function sha1 { Get-FileHash -Algorithm SHA1 $args }
