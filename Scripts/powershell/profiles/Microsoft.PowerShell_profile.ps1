@@ -276,6 +276,26 @@ function winutil {
     }
 }
 
+function god_mode($directory) {
+    try {
+        $path = $directory + "\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
+        if ((Test-Path -Path $path -PathType Leaf)) {
+            Write-Host "Starting God Mode" -ForegroundColor Gold
+            ii $path
+        }
+        else {
+            $message = "God Mode not enabled - enabling it to: " + $path
+            Write-Host $message -ForegroundColor Green
+            New-Item -Path $path -ItemType directory -Force
+            Write-Host "God Mode enabled" -ForegroundColor Blue
+            ii $path
+        }   
+    }
+    catch {
+        throw $_.Exception.Message
+    }
+}
+
 function robo_copy($source, $destination) {
     try {
         $powershell = GetUserPowerShellPath
