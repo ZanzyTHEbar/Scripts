@@ -6,7 +6,7 @@ This readme will guide you through the process of setting up a CMD profile with 
 
 Firstly, install [Oh-My-Posh](https://ohmyposh.dev/docs/installation) if you haven't already for the the powershell profile.
 
-Secondly install [Clink](https://chrisant996.github.io/clink/clink.html#getting-started) for cmd support.
+Secondly install [Clink](https://github.com/chrisant996/clink) for cmd support.
 
 > **Note**: When installing `CLINK` ensure that you check the `autostart` option.
 
@@ -19,3 +19,7 @@ Secondly install [Clink](https://chrisant996.github.io/clink/clink.html#getting-
 5. Go to the `Font` tab and select `Caskadyia Nerd Font`.
 
    - if you have not installed the font, you can download it from [here](/Scripts/powershell/profiles/fonts/).
+
+## Useful Links
+
+- [Clink Documentation](https://chrisant996.github.io/clink/clink.html#getting-started)
