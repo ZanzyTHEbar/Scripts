@@ -4,10 +4,14 @@ This readme will guide you through the process of setting up a CMD profile with 
 
 ## Install
 
-Firstly, install [Oh-My-Posh](https://ohmyposh.dev/docs/installation) if you haven't already for the the powershell profile.
+First, navigate to the [powershell/profiles](./Scripts/powershell/profiles) directory and run the `setup.ps1` script as administrator. This will install the required dependencies and set up the profile.
 
-Secondly install [Clink](https://github.com/chrisant996/clink) for cmd support.
+Next, navigate to the [cmd/profiles](./Scripts/cmd/profiles) directory and run the `exe` for `clink`. This will allow `cmd` to use `the oh-my-posh` profile.
 
+Setting up the profiles this way will allow you to use the same theme in both `powershell` and `cmd`.
+
+> **Warning**: You must have scripting enabled on your machine to run the `setup.ps1` script. You can enable this by running `Set-ExecutionPolicy UnRestricted` in an elevated powershell window.
+> answer Y to all the options, then run `Set-ExecutionPolicy UnRestricted -Force`.
 > **Note**: When installing `CLINK` ensure that you check the `autostart` option.
 
 ## Steps
