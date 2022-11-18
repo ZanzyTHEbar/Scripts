@@ -276,6 +276,26 @@ function winutil {
     }
 }
 
+function god_mode($directory) {
+    try {
+        $path = $directory + "\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
+        if ((Test-Path -Path $path -PathType Leaf)) {
+            Write-Host "Starting God Mode" -ForegroundColor Gold
+            ii $path
+        }
+        else {
+            $message = "God Mode not enabled - enabling it to: " + $path
+            Write-Host $message -ForegroundColor Green
+            New-Item -Path $path -ItemType directory -Force
+            Write-Host "God Mode enabled" -ForegroundColor Blue
+            ii $path
+        }   
+    }
+    catch {
+        throw $_.Exception.Message
+    }
+}
+
 function robo_copy($source, $destination) {
     try {
         $powershell = GetUserPowerShellPath
@@ -290,6 +310,31 @@ function robo_copy($source, $destination) {
             Write-Host "@ZanyTHEbar Scripts Github Repo" -ForegroundColor Blue
             start "https://github.com/ZanzyTHEbar/Scripts/blob/master/Scripts/powershell/utilities/robo_copy.ps1"
         }   
+    }
+    catch {
+        throw $_.Exception.Message
+    }
+}
+
+function healthcheck {
+    try {
+        $CurrentWindowsIdentity = [System.Security.Principal.WindowsIdentity]::GetCurrent()
+        $CurrentWindowsPrincipal = New-Object System.Security.Principal.WindowsPrincipal($CurrentWindowsIdentity)
+        $CurrentWindowsPrincipal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
+        if ($CurrentWindowsPrincipal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)) {
+            (DISM.exe /Online /Cleanup-image /Scanhealth | Out-Null).Content
+            (DISM.exe /Online /Cleanup-image /Restorehealth | Out-Null).Content
+            (DISM.exe /online /cleanup-image /startcomponentcleanup | Out-Null).Content
+            (sfc /scannow | Out-Null).Content
+            Write-Host "Healthcheck complete" -ForegroundColor Green
+            Write-Host "Please restart your system for the changes to take effect" -ForegroundColor Green
+            Write-Host "@ZanyTHEbar Scripts Github Repo" -ForegroundColor Blue
+        }
+        else {
+            $Esc = [char]0x1b
+            $message = "Insufficient permissions to run this command. Please type $Esc[94;3madmin, sudo or su$Esc[0m $Esc[33mto elevate yourself and run this script again$Esc[0m"
+            Write-Warning $message
+        }
     }
     catch {
         throw $_.Exception.Message
