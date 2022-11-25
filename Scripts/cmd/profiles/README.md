@@ -15,6 +15,7 @@ Setting up the profiles this way will allow you to use the same theme in both `p
 
 > **Warning**: You must have scripting enabled on your machine to run the `setup.ps1` script. You can enable this by running `Set-ExecutionPolicy UnRestricted` in an elevated powershell window.
 > answer Y to all the options, then run `Set-ExecutionPolicy UnRestricted -Force`.
+
 > **Note**: When installing `CLINK` ensure that you check the `autostart` option.
 
 ## Steps
