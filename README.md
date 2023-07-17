@@ -10,7 +10,9 @@ This script is used to setup the PowerShell profile on a machine. It will create
 
 This script setups necessary environment variables and aliases for the PowerShell profile, as well as installs `chocolatey` and  `oh-my-posh`.
 
-> **Note**: You must manually install the fonts (or whatever font you prefer - the included one is best). You can find the fonts in the [`fonts`](/Scripts/powershell/profiles/fonts/) directory.
+> **Note**: You must manually install the fonts (or whatever font you prefer - the included one is best). The default compatible Nerd font will be downloaded to `C:\\Users\<user>\cove.zip`. To choose a custom font, it is recommended to use this site `https://www.nerdfonts.com/font-downloads`, otherwise the icons will not work properly.
+
+## Setup
 
 You clone this repo and install the profile by running the following command:
 
@@ -28,6 +30,7 @@ irm https://github.com/ZanzyTHEbar/Scripts/raw/main/Scripts/powershell/profiles/
 ### Manually Install fonts
 
 To manually install the fonts, you will need to open the directory where the fonts are located, selet all of them and right-click.
+
 Click the `install` option.
 
 Once installed, you can proceed to set the font in your terminal(s).
