@@ -10,7 +10,10 @@ This script is used to setup the PowerShell profile on a machine. It will create
 
 This script setups necessary environment variables and aliases for the PowerShell profile, as well as installs `chocolatey` and  `oh-my-posh`.
 
-> **Note**: You must manually install the fonts (or whatever font you prefer - the included one is best). The default compatible Nerd font will be downloaded to `C:\\Users\<user>\cove.zip`. To choose a custom font, it is recommended to use this site `https://www.nerdfonts.com/font-downloads`, otherwise the icons will not work properly.
+> [!IMPORTANT]\
+> You must manually install the fonts (or whatever font you prefer - the included one is best).
+> The default compatible Nerd font will be downloaded to `C:\\Users\<user>\cove.zip`.
+> To choose a custom font, it is recommended to use this site <https://www.nerdfonts.com/font-downloads>, otherwise the icons will not work properly.
 
 ## Setup
 
