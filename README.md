@@ -83,7 +83,7 @@ It will look something like this:
 
 ```json
 "Windows PowerShell": {
-   "path": "C:\\Program FilesPowerShell\\7\\pwsh.exe",
+   "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
    "icon": "terminal-powershell",
    "args": [
      "-NoExit",
