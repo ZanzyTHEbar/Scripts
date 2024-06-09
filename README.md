@@ -59,7 +59,7 @@ If this does not appear, go to the bottom of the file and add the following:
 Optionally, you can set Powershell as your default profile to powershell.
 
 ```json
-"terminal.integrated.defaultProfile.windows": "PowerShell"
+"terminal.integrated.defaultProfile.windows": "Windows PowerShell"
 ```
 
 You will also need to add the following to the `settings.json` file - in order to set the profile for the integrated terminal (Powershell Extension):
