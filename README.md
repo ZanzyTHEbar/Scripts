@@ -69,6 +69,30 @@ You will also need to add the following to the `settings.json` file - in order t
 "powershell.scriptAnalysis.enable": true,
 ```
 
+> [!WARNING]\
+> If you experience un-rendered ANSI codes in the system prompt, after setup, you need to add the following to your `terminal.integrated.profiles.windows`
+```json
+"args": [
+  "-NoExit",
+  "-Command",
+  "oh-my-posh init pwsh | Invoke-Expression"
+]
+```
+
+It will look something like this:
+
+```json
+"Windows PowerShell": {
+   "path": "C:\\Program FilesPowerShell\\7\\pwsh.exe",
+   "icon": "terminal-powershell",
+   "args": [
+     "-NoExit",
+     "-Command",
+     "oh-my-posh init pwsh | Invoke-Expression"
+  ]
+},
+```
+
 Then, you will need to copy the `Microsoft.VSCode_profile.ps1` file to the following directory:
 
 ```bash
